@@ -1,0 +1,21 @@
+= form_for @fact_sale do |f|
+  - if @fact_sale.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@fact_sale.errors.count, "error")} prohibited this fact_sale from being saved:"
+      ul
+        - @fact_sale.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :started_at
+    = f.text_field :started_at
+  .field
+    = f.label :charged_amount
+    = f.number_field :charged_amount
+  .field
+    = f.label :estimated_amount
+    = f.number_field :estimated_amount
+  .field
+    = f.label :location
+    = f.text_field :location
+  .actions = f.submit 'Save'

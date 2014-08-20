@@ -1,0 +1,27 @@
+h1 Listing fact_sales
+
+table
+  thead
+    tr
+      th Started at
+      th Charged amount
+      th Estimated amount
+      th Location
+      th
+      th
+      th
+
+  tbody
+    - @fact_sales.each do |fact_sale|
+      tr
+        td = fact_sale.started_at
+        td = fact_sale.charged_amount
+        td = fact_sale.estimated_amount
+        td = fact_sale.location
+        td = link_to 'Show', fact_sale
+        td = link_to 'Edit', edit_fact_sale_path(fact_sale)
+        td = link_to 'Destroy', fact_sale, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Fact sale', new_fact_sale_path

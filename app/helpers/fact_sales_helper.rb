@@ -1,0 +1,2 @@
+module FactSalesHelper
+end

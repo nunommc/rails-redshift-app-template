@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Started at:
+  = @fact_sale.started_at
+p
+  strong Charged amount:
+  = @fact_sale.charged_amount
+p
+  strong Estimated amount:
+  = @fact_sale.estimated_amount
+p
+  strong Location:
+  = @fact_sale.location
+
+= link_to 'Edit', edit_fact_sale_path(@fact_sale)
+'|
+= link_to 'Back', fact_sales_path
