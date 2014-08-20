@@ -4,11 +4,10 @@ development:
 
 
 test:
-  # host: adm-demo.cidv375zgkp5.eu-west-1.redshift.amazonaws.com
   adapter:  redshift
   host:     localhost
   encoding: unicode
-  database: hsa-billing_test
+  database: dbtest
   pool:     5
   username: hsa
   template: template0
@@ -17,7 +16,7 @@ production:
   adapter:  redshift
   host:     localhost
   encoding: unicode
-  database: hsa-billing_production
+  database: dbproduction
   pool:     5
   username: hsa
   template: template0
